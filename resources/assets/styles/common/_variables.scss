@@ -1,0 +1,37 @@
+//---------------------------------------------------------------------
+// Common: Variables
+//---------------------------------------------------------------------
+
+// Fonts
+//---------------------------------------------------------------
+
+// Font Family
+$font-sans: $font-helvetica;
+$font-serif: $font-georgia;
+
+// Font Settings
+$font-fallback: false;
+$font-px-only: false;
+$line-height-base: 1;
+
+// Sizing / Spacing
+//---------------------------------------------------------------
+
+// Rem Settings
+$rem-baseline: 16px;
+$rem-fallback: false;
+$rem-px-only: false;
+
+// Vertical Alignment
+$spacer: 16px;
+
+
+// Z-indexes
+//---------------------------------------------------------------
+$z-index-site-header: 100;
+
+
+// Transitions / Animations
+//---------------------------------------------------------------
+$link-transition: color 0.2s ease !default;
+$btn-transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease !default;

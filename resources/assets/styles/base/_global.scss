@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------
+// Base: Global
+//
+// This file sets up base global styles.
+//---------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  min-width: 300px;
+}
+
+.site-container {
+  // Empty
+}

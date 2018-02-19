@@ -1,0 +1,17 @@
+{
+    "host": "localhost",
+    "port": 3000,
+    "proxy": "http://localhost:8080/",
+    "proxyUrl": "http://localhost:3000",
+    "open": false,
+    "https": false,
+    "online": false,
+    "files": [
+        "{app,resources/templates}/**/*.php",
+        "*.php"
+    ],
+    "snippetOptions": {
+        "whitelist": ["/wp-admin/admin-ajax.php"],
+        "blacklist": ["/wp-admin/**"]
+    }
+}

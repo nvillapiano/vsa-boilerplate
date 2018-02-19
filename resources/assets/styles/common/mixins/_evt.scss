@@ -1,0 +1,48 @@
+//---------------------------------------------------------------------
+// Mixin: Event Listener
+//
+// Mixin for psuedo event listeners: default, hover, focus
+// Helpful for addressing device hover stickiness
+//
+// Usage:
+// @include evt {
+//   color: black;
+// }
+
+// @include evt(hover) {
+//   color: red;
+// }
+//
+//---------------------------------------------------------------------
+
+@mixin evt($type:default) {
+
+  @if $type == "default" or $type == "plain" or $type == "none" {
+    @content;
+
+    @media (hover: none) {
+      html &:hover {
+        @content;
+      }
+    }
+  }
+
+  @if $type == "hover" {
+    &:hover {
+      @content;
+    }
+
+    @media (hover: none) {
+      &.hover,
+      &:active {
+        @content;
+      }
+    }
+  }
+
+  @if $type == "focus" {
+    &:focus {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+//---------------------------------------------------------------------
+// Base: Typography
+//---------------------------------------------------------------------
+
+body {
+  color: color(default);
+  background: $color-white;
+  @include type-0;
+
+  // Set Rem Baseline
+  // @include rem-baseline;
+
+  /* Sometimes you need this with certain custom fonts */
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+
+// Headings
+// --------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: $spacer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1 {
+  @include type-1;
+}
+
+h2 {
+  @include type-1;
+}
+
+h3 {
+  @include type-1;
+}
+
+h4 {
+  @include type-1;
+}
+
+h5 {
+  @include type-1;
+}
+
+h6 {
+  @include type-1;
+}
+
+// Paragraph
+// --------------------------------------------------
+
+p {
+  margin-top: 0;
+  margin-bottom: $spacer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  @include evt() {
+    color: color(primary);
+    text-decoration: underline;
+  }
+
+  @include evt(hover) {
+    color: color(primary);
+    text-decoration: none;
+  }
+}

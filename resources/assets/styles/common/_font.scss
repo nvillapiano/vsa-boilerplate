@@ -1,0 +1,87 @@
+//---------------------------------------------------------------------
+// Common: Font
+//
+// Font variables.
+//
+// Usage:
+// font(16px, 16px);
+//
+//---------------------------------------------------------------------
+
+// Custom Font Family Variables
+//---------------------------------------------------------------
+
+// Define custom fonts here.
+// ...
+
+
+// Serif Font Family Stacks
+// @see - http://cssfontstack.com/
+//---------------------------------------------------------------
+
+$font-baskerville: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif !default;
+$font-big-caslon: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif !default;
+$font-bodoni-mt: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif !default;
+$font-book-antiqua: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif !default;
+$font-calisto-mt: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif !default;
+$font-cambria: Cambria, Georgia, serif !default;
+$font-didot: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif !default;
+$font-garamond: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif !default;
+$font-georgia: Georgia, Times, "Times New Roman", serif !default;
+$font-goudy-old-style: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif !default;
+$font-hoefler-text: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif !default;
+$font-lucidia-bright: "Lucida Bright", Georgia, serif !default;
+$font-palatino: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif !default;
+$font-perpetua: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif !default;
+$font-rockwell: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif !default;
+$font-rockwell-bold: "Rockwell Extra Bold", "Rockwell Bold", monospace !default;
+$font-times: Times, "Times New Roman", serif !default;
+$font-times-new-roman: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif !default;
+
+// Sans-Serif Font Family Stacks
+// @see - http://cssfontstack.com/
+//---------------------------------------------------------------
+
+$font-arial: Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$font-arial-black: "Arial Black", "Arial Bold", Gadget, sans-serif !default;
+$font-arial-narrow: "Arial Narrow", Arial, sans-serif !default;
+$font-arial-rounded: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif !default;
+$font-avant-garde: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif !default;
+$font-calibri: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !default;
+$font-candara: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif !default;
+$font-century-gothic: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !default;
+$font-frankin-gothic: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif !default;
+$font-futura: Futura, "Trebuchet MS", Arial, sans-serif !default;
+$font-geneva: Geneva, Tahoma, Verdana, sans-serif !default;
+$font-gill-sans: "Gill Sans", "Gill Sans MT", Calibri, sans-serif !default;
+$font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-impact: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif !default;
+$font-lucida-grande: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif !default;
+
+// Google Font Family Stacks
+//---------------------------------------------------------------
+
+$font-lustria: 'Lustria', serif !default;
+$font-ubuntu-mono: 'Ubuntu Mono', sans-serif !default;
+$font-lato: 'Lato', sans-serif !default;
+$font-lora: 'Lora', serif !default;
+$font-ubuntu: 'Ubuntu', sans-serif !default;
+$font-ubuntu-condensed: 'Ubuntu Condensed', sans-serif !default;
+$font-roboto: 'Roboto', sans-serif !default;
+$font-roboto-condensed: 'Roboto Condensed', sans-serif !default;
+$font-roboto-slab: 'Roboto Slab', serif !default;
+$font-raleway: 'Raleway', sans-serif !default;
+$font-raleway-dots: 'Raleway Dots', cursive !default;
+$font-merriweather: 'Merriweather', serif !default;
+$font-merriweather-sans: 'Merriweather Sans', sans-serif !default;
+$font-quattrocento: 'Quattrocento', serif !default;
+$font-quattrocento-sans: 'Quattrocento Sans', sans-serif !default;
+$font-droid-sans: 'Droid Sans', sans-serif !default;
+$font-droid-serif: 'Droid Serif', serif !default;
+$font-source-serif: 'Source Sans Pro', sans-serif;
+
+// Font Family Variables
+// Override font family variables in the common/variables file.
+//---------------------------------------------------------------
+$font-sans: $font-helvetica !default;
+$font-serif: $font-georgia !default;

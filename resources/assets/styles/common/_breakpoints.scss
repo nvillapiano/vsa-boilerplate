@@ -1,0 +1,52 @@
+//---------------------------------------------------------------------
+// Common: Breakpoints
+//
+// Some basic info about setting breakpoints
+// @see - https://www.google.com/design/spec/layout/responsive-ui.html
+// Sass Mq is used to create media query mixins
+// @see - https://github.com/sass-mq/sass-mq
+// @see - http://sass-mq.github.io/sass-mq/
+//---------------------------------------------------------------------
+
+// Breakpoint Variables
+//---------------------------------------------------------------
+
+/* stylelint-disable */
+
+// Defined for Bootstrap 4
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 960px,
+  xl: 1280px
+);
+
+// Defined for Sass-MQ Vendor Plugin
+$mq-breakpoints: (
+  'xxs':  0px,
+  'xs':   320px,
+  'sm':   map-get($grid-breakpoints, 'sm'),
+  'md':   map-get($grid-breakpoints, 'md'),
+  'lg':   map-get($grid-breakpoints, 'lg'),
+  'xl':   map-get($grid-breakpoints, 'xl')
+);
+
+$mq-show-breakpoints: (xxs, xs, sm, md, lg, xl);
+
+/* stylelint-enable */
+
+// Breakpoint helper
+// Show Breakpoint helper when using development environment
+//---------------------------------------------------------------
+body {
+  &::before {
+    display: none;
+  }
+
+  &.env--development {
+    &::before {
+      display: block;
+    }
+  }
+}

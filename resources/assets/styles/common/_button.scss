@@ -1,0 +1,41 @@
+//---------------------------------------------------------------------
+// Common: Button
+//---------------------------------------------------------------------
+
+// Button Base
+//---------------------------------------------------------------
+@mixin btn-base {
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  transition: $btn-transition;
+  cursor: pointer;
+
+  .btn-icon {
+    .icon {
+      transition: $btn-transition;
+    }
+  }
+
+  // Icon is to the right of text
+  .btn-text + .btn-icon {
+    margin-left: rem(6px);
+  }
+
+  // Icon is to the left of text
+  .btn-icon + .btn-text {
+    margin-left: rem(6px);
+  }
+
+  // JS Outline Disabled Plugin
+  // Plugin only disables outline focus not custom styles added by Bootstrap or other code.
+  html.outline-disabled & {
+    box-shadow: none !important;
+  }
+}
+
+// Button Primary
+//---------------------------------------------------------------
+@mixin btn-primary {
+  @include btn-base;
+}

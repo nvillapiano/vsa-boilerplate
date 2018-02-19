@@ -1,0 +1,22 @@
+{
+
+    "paths": {
+        "root": "../../../../"
+    },
+
+    "assets": {
+        "main": [
+            "./scripts/main.js",
+            "./styles/main.scss"
+        ],
+        "head": [
+            "./scripts/head.js"
+        ]
+    },
+
+    "settings": {
+        "browserSync": {
+            "devUrl": "https://domain.localhost/"
+        }
+    }
+}

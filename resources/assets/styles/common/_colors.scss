@@ -1,0 +1,60 @@
+//---------------------------------------------------------------------
+// Common: Colors
+//
+// Usage: color: color(purple) returns `color: #8860ED;`
+// Ussage: _color(purple, light, 10%)
+//---------------------------------------------------------------------
+
+// Color Variables
+//---------------------------------------------------------------
+$color-shade-amount: 30% !default;
+
+// Color Definitions
+// Define color names by hex values. Names are easier to remember.
+//---------------------------------------------------------------
+$color-black: #000;
+$color-white: #fff;
+
+$colors: (
+  default: $color-black,
+  primary: $color-black,
+  secondary: $color-black,
+  white: $color-white,
+  black: $color-black,
+  cyan: #84ffff,
+  light-gray: #e6e7e8,
+  dark-gray: #282829,
+  lime: #d3de43,
+  green: #019875,
+  orange: #ff9e2e,
+  magenta: #d30d8c,
+  plum: #9c1d86,
+  purple: #9722cc,
+  deep-purple: #5e1780,
+  blue: #00b0ff,
+  medium-blue: #1978d4,
+  error-red: #ff1744,
+  success-green: #00e676
+);
+
+// retrieve color from $colors map ie. `color(primary)`
+@function color($color-name: "default") {
+  @return map-get($colors, $color-name);
+}
+
+// retrieve color from $colors map ie. `_color(purple, light, 10%)`
+@function _color($color-name: "default", $color-variant:null, $shade-amount: $color-shade-amount) {
+  // color variant is optional
+  @if ($color-variant == 'light') {
+    @return lighten(map-get($colors, $color-name), $shade-amount);
+  }
+
+  // color variant is optional
+  @else if ($color-variant == 'dark') {
+    @return darken(map-get($colors, $color-name), $shade-amount);
+  }
+
+  @else {
+    @return map-get($colors, $color-name);
+  }
+}

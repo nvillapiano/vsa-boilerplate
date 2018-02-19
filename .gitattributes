@@ -1,0 +1,6 @@
+* text=auto
+/.gitattributes export-ignore
+/.travis.yml export-ignore
+/.babelrc export-ignore
+/.editorconfig export-ignore
+/resources/assets export-ignore

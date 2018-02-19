@@ -1,0 +1,83 @@
+//---------------------------------------------------------------------
+// Mixin: Font
+//
+// Mixin for one liner font styles
+//
+// Usage:
+// @include font($size: 16px, $height: 18px, $family: $font-sans, $weight: 400)
+//
+//---------------------------------------------------------------------
+
+// Font Variables
+// Override font variables in the common/variables file.
+//---------------------------------------------------------------
+$font-fallback: false !default;
+$font-px-only: false !default;
+
+// Mixin for font-size
+@mixin fontSize($size) {
+  @if $font-px-only {
+    font-size: $size;
+  }
+  @else {
+    @if $font-fallback {
+      font-size: $size;
+    }
+    font-size: rem($size);
+  }
+}
+
+// Mixin for line-height
+@mixin fontLineHeight($line-height:1, $size:$line-height) {
+  @if type-of($line-height) == 'number' and not unitless($line-height) {
+    @if $font-fallback {
+      line-height: $line-height;
+    }
+    line-height: calculate-line-height($line-height, $size);
+  }
+  @else {
+    line-height: $line-height;
+  }
+}
+
+@function calculate-line-height($line-height, $size) {
+  @return $line-height / $size;
+}
+
+// Mixin for font-family
+@mixin fontFamily($family) {
+  font-family: $family;
+}
+
+// Mixin for font-weight
+@mixin fontWeight($weight) {
+  font-weight: $weight;
+}
+
+// Main font mixin
+@mixin font($size:null, $line-height:null, $height:null, $family:null, $weight:null) {
+  @if ($family != null) {
+    @include fontFamily($family);
+  }
+
+  @if ($size != null) {
+    @include fontSize($size);
+  }
+
+  @if($height != null) {
+    $line-height: $height;
+  }
+
+  @if ($line-height != null) {
+    @if ($size != null) {
+      @include fontLineHeight($line-height, $size);
+    }
+    @else {
+      @include fontLineHeight($line-height);
+    }
+  }
+
+  @if ($weight != null) {
+    @include fontWeight($weight);
+  }
+}

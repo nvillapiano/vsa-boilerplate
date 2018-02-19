@@ -1,0 +1,52 @@
+//---------------------------------------------------------------------
+// Common: Type Styles
+//---------------------------------------------------------------------
+
+// Type 0
+//---------------------------------------------------------------
+@mixin type-0() {
+  @include font(
+    $size : 16px,
+    $height : 18px,
+    $family: $font-sans,
+    $weight: 400
+  );
+
+  // @include font($size: 16px, $height: 18px, $family: $font-sans, $weight: 400);
+
+  @include mq($from: sm) {
+    @include font($size: 16px, $height: 18px);
+  }
+
+  @include mq($from: lg) {
+    @include font($size: 16px, $height: 18px);
+  }
+}
+
+// Type 1
+//---------------------------------------------------------------
+@mixin type-1() {
+  @include font(
+    $size: 32px,
+    $height: 36px,
+    $family: $font-serif,
+    $weight: 600
+  );
+
+  @include mq($from: sm) {
+    @include font($size: 32px, $height: 36px);
+  }
+
+  @include mq($from: lg) {
+    @include font($size: 32px, $height: 36px);
+  }
+}
+
+// @todo nice-to-have mixin
+// @mixin type( $type:0 ) {
+//   $type: 'type-#{$type}';
+//
+//   if mixin-exists(#{$type}) {
+//     @include #{$type}();
+//   }
+// }

@@ -1,0 +1,106 @@
+{
+    "name": "vsadev-boilerplate-frontend",
+    "version": "0.0.0",
+    "title": "VSADev Frontend Boilerplate",
+    "description": " ",
+    "author": {
+        "name": "VSA Partners",
+        "url": "http://www.vsapartners.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/vsapartners/vsadev-boilerplate-frontend"
+    },
+    "private": true,
+    "license": "Unlicensed",
+    "browserslist": [
+        "last 2 versions",
+        "android 4"
+    ],
+    "stylelint": {
+        "rules": {}
+    },
+    "scripts": {
+        "watch": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js && gulp watch --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "start": "npm run -s watch",
+        "dev": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "build": "npm run -s dev",
+        "dist": "gulp --production --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "dist-allow-lint-errors": "gulp --production --allowlint --gulpfile resources/assets/build/gulp/gulpfile.js",
+        "build:production": "npm run -s dist",
+        "build:production:allow-lint": "npm run -s dist-allow-lint-errors",
+        "lint": "npm run -s lint:scripts && npm run -s lint:styles",
+        "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
+        "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
+        "test": "npm run -s lint",
+        "gulp": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js -- "
+    },
+    "engines": {
+        "node": ">= 6.9.4"
+    },
+    "config": {},
+    "devDependencies": {
+        "access-sniff": "^3.0.1",
+        "babel-core": "6.26.0",
+        "babel-eslint": "^8.1.2",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babelify": "^8.0.0",
+        "browser-sync": "~2.23.1",
+        "browserify": "^14.4.0",
+        "browserify-shim": "^3.8.14",
+        "critical": "^1.1.0",
+        "del": "~3.0.0",
+        "gulp": "~3.9.1",
+        "gulp-autoprefixer": "~4.1.0",
+        "gulp-concat": "~2.6.1",
+        "gulp-cssnano": "~2.1.2",
+        "gulp-eslint": "^4.0.0",
+        "gulp-help": "~1.6.1",
+        "gulp-if": "~2.0.2",
+        "gulp-imagemin": "~4.1.0",
+        "gulp-newer": "^1.3.0",
+        "gulp-notify": "~3.0.0",
+        "gulp-phpcs": "~2.1.0",
+        "gulp-phpmd-plugin": "^1.1.4",
+        "gulp-plumber": "~1.1.0",
+        "gulp-sass": "~3.1.0",
+        "gulp-sass-glob": "^1.0.8",
+        "gulp-sourcemaps": "~2.6.0",
+        "gulp-stylelint": "^5.0.0",
+        "gulp-svg-sprite": "~1.3.6",
+        "gulp-svgmin": "~1.2.3",
+        "gulp-uglify": "~3.0.0",
+        "gulp-util": "~3.0.8",
+        "imagemin-pngquant": "~5.0.0",
+        "merge-stream": "~1.0.1",
+        "ngrok": "^2.2.6",
+        "node-sass-tilde-importer": "1.0.0",
+        "prettyjson": "^1.2.1",
+        "psi": "^3.0.0",
+        "sass-mq": "4.0.2",
+        "stylelint": "^8.0.0",
+        "stylelint-config-standard": "^18.0.0",
+        "vinyl-buffer": "^1.0.0",
+        "vinyl-source-stream": "^2.0.0",
+        "w3cjs": "^0.4.0",
+        "eslint-plugin-import": "2.8.0",
+        "merge-deep": "3.0.0"
+    },
+    "dependencies": {
+        "jquery": "3.2.1",
+        "bootstrap": "v4.0.0-beta",
+        "popper.js": "^1.12.0",
+        "tether": "^1.4.0",
+        "lazysizes": "4.0.1",
+        "svg4everybody": "^2.1.4"
+    },
+    "browserify": {
+        "transform": [
+            "browserify-shim"
+        ]
+    },
+    "browserify-shim": {
+        "jquery": "$"
+    }
+}
