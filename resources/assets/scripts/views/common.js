@@ -9,6 +9,9 @@ import setEnv from '../libs/setEnv';
 import debug from '../libs/debug';
 import smartOutline from '../libs/smartOutline';
 
+// Import Vue
+import Vue from '../vendor/vue'
+
 export default {
   init() {
     // JavaScript to be fired on all pages
@@ -16,6 +19,14 @@ export default {
     setEnv.init();
     debug.init();
     smartOutline.init();
+    new Vue({
+      el: '#app',
+      data: {
+        title: 'Hello World!',
+      },
+      methods: {
+      },
+    });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

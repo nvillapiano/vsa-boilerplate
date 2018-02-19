@@ -33,7 +33,8 @@
         "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
         "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
         "test": "npm run -s lint",
-        "gulp": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js -- "
+        "gulp": "gulp --gulpfile resources/assets/build/gulp/gulpfile.js -- ",
+        "serve": "open http://localhost:35729 && livereload -w 0.5"
     },
     "engines": {
         "node": ">= 6.9.4"
